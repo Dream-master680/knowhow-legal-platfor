@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
@@ -10,7 +10,13 @@
 <body>
   <header class="site-header">
     <div class="container header-inner">
-          <div class="brand" role="banner" aria-label="网站名称">KnowHow</div>
+          <div class="brand-stack" role="banner" aria-label="网站名称">
+            <div class="brand">KnowHow</div>
+            <details class="brand-easter" aria-label="法力无Byte彩蛋">
+              <summary>法力无Byte</summary>
+              <div class="brand-easter-text" onclick="this.closest('details').open = false">你认真走的每一步，都会把未来照亮一点。—— 法力无Byte</div>
+            </details>
+          </div>
       <nav class="nav" aria-label="主导航">
         <a href="#/" class="nav-link">首页</a>
         <a href="#/about" class="nav-link">简介</a>
@@ -82,29 +88,25 @@
         <div class="auth-error" id="authError"></div>
       </form>
       
-      <div class="auth-demo">
-        <div class="small">演示账号：</div>
-        <div class="small">
-          超级管理员：<span class="kbd">admin</span> / <span class="kbd">admin123</span>
-        </div>
-        <div class="small">
-          律师：<span class="kbd">lawyer</span> / <span class="kbd">123456</span>
-        </div>
-        <div class="small">
-          用户：<span class="kbd">user</span> / <span class="kbd">123456</span>
-        </div>
-      </div>
+      <details class="auth-demo auth-demo-bottom">
+        <summary>测试账号（仅体验）</summary>
+        <div class="small">超级管理员：<span class="kbd">admin</span> / <span class="kbd">admin123</span></div>
+        <div class="small">律师：<span class="kbd">lawyer</span> / <span class="kbd">123456</span></div>
+        <div class="small">用户：<span class="kbd">user</span> / <span class="kbd">123456</span></div>
+      </details>
     </div>
   </div>
 
   <footer class="site-footer">
     <div class="container">
-        <p>© 2025 KnowHow · 演示站点 · 数据仅存储于浏览器本地</p>
+        <p>© 2026 KnowHow · 让法律更可亲，让求助更有回应</p>
+        <details class="corner-note" aria-label="Jasper手记">
+          <summary>Jasper</summary>
+          <div class="corner-note-content" onclick="this.closest('details').open = false">你走过的每一步，都会在未来回头时发光。—— Jasper</div>
+        </details>
     </div>
   </footer>
 
-  <script src="/knowhow-legal-platfor/data-manager.js"></script>
-  <script src="/knowhow-legal-platfor/chat-storage.js"></script>
   <script src="./app.js"></script>
 </body>
 </html> 
